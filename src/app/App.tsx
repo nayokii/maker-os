@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { AppLayout } from '../shared/ui/AppLayout'
+import { CircuitDesignerPage } from '../features/circuit-designer/CircuitDesignerPage'
 import { ComponentDetailPage } from '../features/components/ComponentDetailPage'
 import { ComponentsPage } from '../features/components/ComponentsPage'
 import { DashboardPage } from '../features/dashboard/DashboardPage'
@@ -19,7 +20,7 @@ export function App() {
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="learning" element={<LearningPage />} />
         <Route path="learning/:lessonId" element={<LessonPage />} />
-        <Route path="circuit-designer" element={<ComingSoon title="Circuit Designer" />} />
+        <Route path="circuit-designer" element={<CircuitDesignerPage />} />
         <Route path="simulator" element={<SimulatorPage />} />
         <Route path="firmware-studio" element={<ComingSoon title="Firmware Studio" />} />
       </Route>
