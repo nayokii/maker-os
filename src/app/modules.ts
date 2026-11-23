@@ -13,7 +13,7 @@ export const modules: AppModule[] = [
   { path: '/components', label: 'Components', group: 'Conception', ready: true },
   { path: '/projects', label: 'Projects', group: 'Conception', ready: true },
   { path: '/circuit-designer', label: 'Circuit Designer', group: 'Conception', ready: false },
-  { path: '/simulator', label: 'Simulator', group: 'Exécution', ready: false },
+  { path: '/simulator', label: 'Simulator', group: 'Exécution', ready: true },
   { path: '/firmware-studio', label: 'Firmware Studio', group: 'Exécution', ready: false },
   { path: '/learning', label: 'Learning', group: 'Progression', ready: true },
 ]
