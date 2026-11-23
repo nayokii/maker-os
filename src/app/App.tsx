@@ -1,5 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { AppLayout } from '../shared/ui/AppLayout'
+import { ComponentDetailPage } from '../features/components/ComponentDetailPage'
 import { ComponentsPage } from '../features/components/ComponentsPage'
 import { DashboardPage } from '../features/dashboard/DashboardPage'
 import { ComingSoon } from '../features/placeholder/ComingSoon'
@@ -13,6 +14,7 @@ export function App() {
       <Route element={<AppLayout />}>
         <Route index element={<DashboardPage />} />
         <Route path="components" element={<ComponentsPage />} />
+        <Route path="components/:componentId" element={<ComponentDetailPage />} />
         <Route path="projects" element={<ProjectsPage />} />
         <Route path="learning" element={<LearningPage />} />
         <Route path="learning/:lessonId" element={<LessonPage />} />

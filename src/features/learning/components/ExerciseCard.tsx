@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import type { Exercise } from '../lessons'
+import type { Exercise } from '../../../shared/models/exercise'
 
 type Status = 'idle' | 'wrong' | 'right'
 

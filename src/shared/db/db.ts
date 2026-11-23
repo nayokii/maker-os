@@ -6,13 +6,25 @@ export interface LessonProgress {
   completedAt: string // date ISO
 }
 
+// Dernière consultation d'une fiche composant.
+export interface ComponentView {
+  componentId: string
+  viewedAt: string // date ISO
+}
+
 type MakerDb = Dexie & {
   progress: EntityTable<LessonProgress, 'lessonId'>
+  views: EntityTable<ComponentView, 'componentId'>
 }
 
 export const db = new Dexie('maker-os') as MakerDb
 
-// `lessonId` est la clé primaire : une seule ligne par leçon.
+// La clé primaire est le premier champ listé ; les autres sont des index (pour trier).
 db.version(1).stores({
   progress: 'lessonId',
+})
+// Version 2 : on ajoute la table `views`. Dexie migre la base existante sans rien perdre.
+db.version(2).stores({
+  progress: 'lessonId',
+  views: 'componentId, viewedAt',
 })

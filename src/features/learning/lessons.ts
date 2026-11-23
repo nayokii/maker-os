@@ -1,15 +1,6 @@
 import ohm from '../../../content/lessons/00-tension-courant-resistance.md?raw'
 import led from '../../../content/lessons/01-resistance-de-led.md?raw'
-
-export interface Exercise {
-  id: string
-  prompt: string
-  unit: string
-  answer: number
-  tolerance: number // erreur relative acceptée (0.02 = 2 %)
-  hint: string
-  explanation: string
-}
+import type { Exercise } from '../../shared/models/exercise'
 
 export interface Lesson {
   id: string
